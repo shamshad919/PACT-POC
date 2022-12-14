@@ -1,0 +1,385 @@
+{
+  "consumer": {
+    "name": "CllService"
+  },
+  "interactions": [
+    {
+      "description": "getting cards overview response",
+      "providerStates": [
+        {
+          "name": "loyalty cards overview"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/bink/loyalty-cards-overview"
+      },
+      "response": {
+        "body": {
+          "loyalty_cards": [
+            {
+              "balance": {
+                "body_text": "string",
+                "current_display_value": "string",
+                "current_value": "string",
+                "loyalty_currency_name": "string",
+                "prefix": "string",
+                "suffix": "string",
+                "target_value": "string",
+                "updated_at": "string"
+              },
+              "card": {
+                "barcode": "string",
+                "barcode_type": 100,
+                "card_number": "string",
+                "colour": "string",
+                "text_colour": "string"
+              },
+              "is_fully_pll_linked": true,
+              "loyalty_card_id": 100,
+              "loyalty_plan_name": "string",
+              "reward_available": true,
+              "status": {
+                "description": "string",
+                "slug": "string",
+                "state": "string"
+              }
+            },
+            {
+              "balance": {
+                "body_text": "string",
+                "current_display_value": "string",
+                "current_value": "string",
+                "loyalty_currency_name": "string",
+                "prefix": "string",
+                "suffix": "string",
+                "target_value": "string",
+                "updated_at": "string"
+              },
+              "card": {
+                "barcode": "string",
+                "barcode_type": 100,
+                "card_number": "string",
+                "colour": "string",
+                "text_colour": "string"
+              },
+              "is_fully_pll_linked": true,
+              "loyalty_card_id": 100,
+              "loyalty_plan_name": "string",
+              "reward_available": true,
+              "status": {
+                "description": "string",
+                "slug": "string",
+                "state": "string"
+              }
+            },
+            {
+              "balance": {
+                "body_text": "string",
+                "current_display_value": "string",
+                "current_value": "string",
+                "loyalty_currency_name": "string",
+                "prefix": "string",
+                "suffix": "string",
+                "target_value": "string",
+                "updated_at": "string"
+              },
+              "card": {
+                "barcode": "string",
+                "barcode_type": 100,
+                "card_number": "string",
+                "colour": "string",
+                "text_colour": "string"
+              },
+              "is_fully_pll_linked": true,
+              "loyalty_card_id": 100,
+              "loyalty_plan_name": "string",
+              "reward_available": true,
+              "status": {
+                "description": "string",
+                "slug": "string",
+                "state": "string"
+              }
+            }
+          ]
+        },
+        "generators": {
+          "body": {
+            "$.loyalty_cards[*].balance.body_text": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.current_display_value": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.current_value": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.loyalty_currency_name": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.prefix": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.suffix": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.target_value": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].balance.updated_at": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].card.barcode": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].card.barcode_type": {
+              "max": 2147483647,
+              "min": 0,
+              "type": "RandomInt"
+            },
+            "$.loyalty_cards[*].card.card_number": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].card.colour": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].card.text_colour": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].loyalty_card_id": {
+              "max": 2147483647,
+              "min": 0,
+              "type": "RandomInt"
+            },
+            "$.loyalty_cards[*].loyalty_plan_name": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].status.description": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].status.slug": {
+              "size": 20,
+              "type": "RandomString"
+            },
+            "$.loyalty_cards[*].status.state": {
+              "size": 20,
+              "type": "RandomString"
+            }
+          }
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$.loyalty_cards": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.body_text": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.current_display_value": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.current_value": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.loyalty_currency_name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.prefix": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.suffix": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.target_value": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].balance.updated_at": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].card.barcode": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].card.barcode_type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].card.card_number": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].card.colour": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].card.text_colour": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].is_fully_pll_linked": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].loyalty_card_id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "integer"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].loyalty_plan_name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].reward_available": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].status.description": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].status.slug": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.loyalty_cards[*].status.state": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json(;\\s?charset=[\\w\\-]+)?"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.2.7"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "BinkService"
+  }
+}
